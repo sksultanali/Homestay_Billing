@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottoms_sheet_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/greenDark"
+            android:padding="@dimen/_10mdp">
+            <ImageView
+                android:layout_width="@dimen/_18mdp"
+                android:layout_height="@dimen/_18mdp"
+                app:tint="@color/white"
+                android:src="@drawable/double_arrow_right_24"
+                android:layout_margin="@dimen/_5mdp"/>
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/_12font_mdp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Additional Entry"/>
+            <ImageView
+                android:id="@+id/closeDialog"
+                android:layout_width="@dimen/_18mdp"
+                android:layout_height="@dimen/_18mdp"
+                app:tint="@color/white"
+                android:src="@drawable/close_24"
+                android:layout_margin="@dimen/_5mdp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10mdp"
+            android:paddingStart="@dimen/_10mdp"
+            android:paddingEnd="@dimen/_10mdp">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/additionalEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Additional Entry"/>
+                <RadioButton
+                    android:id="@+id/falseEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:text="False Entry"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/falseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/nameFalse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_10mdp"
+                        android:hint="Enter Details"
+                        android:gravity="top"
+                        android:minLines="3"
+                        android:textColor="@color/black"
+                        android:inputType="textMultiLine"
+                        android:textSize="@dimen/_11font_mdp"
+                        android:layout_marginTop="@dimen/_10mdp"
+                        android:background="@drawable/bg_gray"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btnFalseSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:text="Save Entry"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/additionalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description and Amount"
+                    android:textSize="@dimen/_11font_mdp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10mdp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_10mdp"
+                        android:hint="Enter Details"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:textSize="@dimen/_11font_mdp"
+                        android:layout_marginTop="@dimen/_10mdp"
+                        android:background="@drawable/bg_gray"/>
+                    <EditText
+                        android:id="@+id/amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="@dimen/_10mdp"
+                        android:layout_marginStart="@dimen/_5mdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11font_mdp"
+                        android:hint="Amount"
+                        android:inputType="phone"
+                        android:digits="0123456789"
+                        android:layout_marginTop="@dimen/_10mdp"
+                        android:background="@drawable/bg_gray"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Example (click anyone)"
+                    android:textSize="@dimen/_11font_mdp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10mdp"/>
+                <TextView
+                    android:id="@+id/barbe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Barbeque of ₹1050/- "
+                    android:textSize="@dimen/_11font_mdp"
+                    android:padding="@dimen/_5mdp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_gray"
+                    android:layout_marginTop="@dimen/_5mdp"/>
+                <TextView
+                    android:id="@+id/heater"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heater Rent of ₹1050/- "
+                    android:textSize="@dimen/_11font_mdp"
+                    android:padding="@dimen/_5mdp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_gray"
+                    android:layout_marginTop="@dimen/_5mdp"/>
+                <TextView
+                    android:id="@+id/kattle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kattle Rent of ₹1050/- "
+                    android:textSize="@dimen/_11font_mdp"
+                    android:padding="@dimen/_5mdp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_gray"
+                    android:layout_marginTop="@dimen/_5mdp"/>
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:text="Save Entry"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

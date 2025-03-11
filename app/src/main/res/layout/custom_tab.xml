@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabText"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:textSize="@dimen/_11font_mdp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:paddingLeft="@dimen/_5mdp"
+    android:paddingRight="@dimen/_5mdp"
+    android:paddingTop="@dimen/_3mdp"
+    android:background="@drawable/tab_selector"
+    android:textColor="@color/black"
+    android:paddingBottom="@dimen/_3mdp"
+    android:layout_marginEnd="@dimen/_2mdp"/>

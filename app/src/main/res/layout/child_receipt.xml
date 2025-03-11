@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/backStaus"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10mdp"
+    android:layout_marginBottom="@dimen/_10mdp"
+    android:background="@drawable/back_white_border_grey_corner">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:scaleType="fitXY"
+        android:src="@drawable/sittong" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingStart="10dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/invoice_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIT-001"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/invoice_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="97XXXX127"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/journeyDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rooms Added (4)"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="97XXXX127"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/updates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Inside"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textColor="@color/red"/>
+    </LinearLayout>
+</LinearLayout>

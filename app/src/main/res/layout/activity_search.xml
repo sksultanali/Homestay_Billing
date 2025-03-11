@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/background"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10mdp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_22mdp"
+            android:layout_height="@dimen/_22mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            android:src="@drawable/arrow_back_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_5mdp"
+            android:textSize="@dimen/_14font_mdp"
+            android:textStyle="bold"
+            android:text="Previous Receipts"/>
+
+        <ImageView
+            android:id="@+id/moreDetails"
+            android:layout_width="@dimen/_19mdp"
+            android:layout_height="@dimen/_19mdp"
+            android:layout_marginStart="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            app:tint="@color/white"
+            android:src="@drawable/stats_24"/>
+
+        <ImageView
+            android:id="@+id/refreshBtn"
+            android:layout_width="@dimen/_19mdp"
+            android:layout_height="@dimen/_19mdp"
+            android:layout_marginStart="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            app:tint="@color/white"
+            android:src="@drawable/refresh_24"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10mdp"
+        android:background="@drawable/back_white_border_grey_corner"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5mdp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="13dp">
+
+        <EditText
+            android:id="@+id/searchTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:hint="invoice_no/customer name/phone"
+            android:inputType="text"
+            android:padding="@dimen/_5mdp"
+            android:textSize="@dimen/_12font_mdp" />
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/_18mdp"
+            android:layout_height="@dimen/_18mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            android:src="@drawable/close_24"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeStayList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10mdp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laySearch" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10mdp"
+        android:gravity="center"
+        android:padding="@dimen/_10mdp"
+        android:background="@drawable/back_white_border_grey_corner"
+        android:visibility="gone"
+        android:text="You have not added any Properties :(\nPlease add Property"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

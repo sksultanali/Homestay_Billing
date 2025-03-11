@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/reset"
+        android:icon="@drawable/refresh_24"
+        android:title="Reset"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/extras"
+        android:icon="@drawable/layers_24"
+        android:title="Extras"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/guestInfo"
+        android:title="Guest Info"
+        android:icon="@drawable/person_24"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/whatsappShare"
+        android:icon="@drawable/whatsapp_icon1"
+        android:title="Share"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/addEntry"
+        android:icon="@drawable/add_24"
+        android:title="Add Entry"
+        app:showAsAction="ifRoom" />
+</menu>

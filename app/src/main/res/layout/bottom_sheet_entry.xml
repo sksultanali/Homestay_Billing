@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bottoms_sheet_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/greenDark"
+        android:padding="@dimen/_10mdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/_18mdp"
+            android:layout_height="@dimen/_18mdp"
+            app:tint="@color/white"
+            android:src="@drawable/double_arrow_right_24"
+            android:layout_margin="@dimen/_5mdp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12font_mdp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Add Billing Details"/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/_11font_mdp"-->
+<!--                android:text="enter correct details for calculation"/>-->
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            app:tint="@color/white"
+            android:src="@drawable/close_24"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2mdp"
+        android:background="@color/darkGray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10mdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11font_mdp"
+            android:text="Description"/>
+        <EditText
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10mdp"
+            android:hint="Enter Description"
+            android:inputType="text"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:textSize="@dimen/_11font_mdp"
+            android:background="@drawable/bg_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:textSize="@dimen/_11font_mdp"
+            android:text="Calculation Method"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/headPerNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textSize="@dimen/_11font_mdp"
+                android:text="Head/Night"/>
+            <RadioButton
+                android:id="@+id/roomPerNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11font_mdp"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:text="Room/Night"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5mdp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11font_mdp"
+                    android:text="Price"/>
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10mdp"
+                    android:digits="0123456789"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:inputType="number"
+                    android:hint="Amount"
+                    android:textSize="@dimen/_11font_mdp"
+                    android:background="@drawable/bg_gray"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11font_mdp"
+                    android:text="Total (Auto)"/>
+                <EditText
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10mdp"
+                    android:textSize="@dimen/_11font_mdp"
+                    android:hint="ex. 200"
+                    android:inputType="number"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:background="@drawable/bg_dark_grey"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:text="Traveller Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11font_mdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:gravity="center"
+            android:background="@drawable/bg_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5mdp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:tint="@color/icon_color"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:src="@drawable/usergray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:layout_weight="1"
+                android:text="Adult"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11font_mdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/minAdult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/adultNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2"
+                    android:background="@drawable/bg_dark_grey"
+                    android:textColor="@color/blue_purple"
+                    android:textSize="@dimen/_11font_mdp" />
+
+                <ImageView
+                    android:id="@+id/maxAdult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="-90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:gravity="center"
+            android:background="@drawable/bg_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5mdp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:tint="@color/icon_color"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:src="@drawable/usergray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:layout_weight="1"
+                android:text="Child"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11font_mdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/minChild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/childNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_dark_grey"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/blue_purple"
+                    android:textSize="@dimen/_11font_mdp" />
+
+                <ImageView
+                    android:id="@+id/maxChild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="-90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:gravity="center"
+            android:background="@drawable/bg_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5mdp">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:tint="@color/icon_color"
+                android:rotation="-36"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:src="@drawable/nightlight_24"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Night"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10font_mdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5mdp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="@dimen/_10font_mdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/minNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/nightdNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_dark_grey"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/blue_purple"
+                    android:textSize="@dimen/_11font_mdp" />
+
+                <ImageView
+                    android:id="@+id/maxNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="-90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:gravity="center"
+            android:background="@drawable/bg_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5mdp">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:tint="@color/icon_color"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:src="@drawable/room_16"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5mdp"
+                android:layout_weight="1"
+                android:text="Room"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11font_mdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/minRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/roomNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_dark_grey"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/blue_purple"
+                    android:textSize="@dimen/_11font_mdp" />
+
+                <TextView
+                    android:id="@+id/dateGap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/maxRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_effect_icon_colors"
+                    android:onClick="previousWeekAction"
+                    android:padding="5dp"
+                    android:rotation="-90"
+                    app:srcCompat="@drawable/arrow_right"
+                    app:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_11font_mdp"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:text="Record Entry"/>
+
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

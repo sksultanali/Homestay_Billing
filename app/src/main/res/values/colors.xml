@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red">#F44336</color>
+
+    <color name="gray">#f8f8f8</color>
+    <color name="purple">#673AB7</color>
+    <color name="blue">#3F51B5</color>
+    <color name="light_blue">#BEB0BCFF</color>
+    <color name="icon_color">#757272</color>
+    <color name="darkGray">#D5D7DC</color>
+    <color name="selected_date">#FFCCCCCC</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="greenDark">#3A933D</color>
+    <color name="blue_purple">#3F51B5</color>
+    <color name="orange">#FF5722</color>
+    <color name="light_orange">#B9FDDDD3</color>
+    <color name="light_yellow">#D0FBEFC7</color>
+    <color name="Yellow">#FFEB3B</color>
+    <color name="Dark_Yellow">#E1A900</color>
+
+    <color name="transparentColor" >#00FFFFFF</color>
+    <color name="light_blue_purple">#96A6FF</color>
+    <color name="back_green_light">#85FF8A</color>
+    <color name="back_blue_light">#9485CAFF</color>
+
+    <color name="dark_icon_color">#757272</color>
+
+    <color name="real_purple">#673AB7</color>
+    <color name="light_real_purple">#CBB0FD</color>
+
+    <color name="light_color1_blue">#C9C9FF</color>
+    <color name="light_green_color2">#e6fade</color>
+    <color name="light_colour_yellow">#fff8ce</color>
+    <color name="light_colour_orange">#FFDFCE</color>
+    <color name="light_red">#ffdfd6</color>
+    <color name="Peddong">#C09CFF</color>
+</resources>

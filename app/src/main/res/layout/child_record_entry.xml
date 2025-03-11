@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="@dimen/_3mdp"
+    android:id="@+id/mainBack"
+    app:layout_constraintTop_toBottomOf="@id/fLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/slNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_5font_mdp" />
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.25"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="Homestay"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_5font_mdp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="1500"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_5font_mdp" />
+
+    <TextView
+        android:id="@+id/pax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_5font_mdp" />
+
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_5font_mdp" />
+
+    <TextView
+        android:id="@+id/night"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_5font_mdp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="12000"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_5font_mdp" />
+</LinearLayout>
