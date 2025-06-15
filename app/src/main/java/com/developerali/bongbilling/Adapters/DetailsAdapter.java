@@ -52,15 +52,18 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.ViewHold
         holder.binding.slNo.setText(String.valueOf(position+1));
         holder.binding.des.setText(Helpers.capitalizeSentences(detailsModel.getDescription()));
 
+        double child = detailsModel.getChild() > 0 ? (double) detailsModel.getChild()/2 : 0;
+        double pax = detailsModel.getPAX() + child;
+
         holder.binding.price.setText(String.valueOf(detailsModel.getPrice()));
-        holder.binding.pax.setText(String.valueOf(detailsModel.getPAX()));
+        holder.binding.pax.setText(String.format("%.1f", pax));
         holder.binding.room.setText(String.valueOf(detailsModel.getRoom()));
         holder.binding.night.setText(String.valueOf(detailsModel.getNights()));
         holder.binding.total.setText(String.valueOf(detailsModel.getTotal()));
 
         // Hide fields if value is 0
         if (detailsModel.getPrice() == 0) holder.binding.price.setText("");
-        if (detailsModel.getPAX() == 0) holder.binding.pax.setText("");
+        if (detailsModel.getPAX() < 1) holder.binding.pax.setText("");
         if (detailsModel.getRoom() == 0) holder.binding.room.setText("");
         if (detailsModel.getNights() == 0) holder.binding.night.setText("");
         if (detailsModel.getTotal() == 0) holder.binding.total.setText("");

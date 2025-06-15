@@ -596,6 +596,9 @@ public class ReceiptDetails extends AppCompatActivity{
         sheetBinding.minAdult.setOnClickListener(v->{
             Helpers.minusBtn(ReceiptDetails.this, sheetBinding.adultNum);
         });
+        sheetBinding.minChild.setOnClickListener(v->{
+            Helpers.minusBtn(ReceiptDetails.this, sheetBinding.childNum);
+        });
         sheetBinding.minNight.setOnClickListener(v->{
             Helpers.minusBtn(ReceiptDetails.this, sheetBinding.nightdNum);
         });
@@ -606,6 +609,9 @@ public class ReceiptDetails extends AppCompatActivity{
         //Plus Buttons
         sheetBinding.maxAdult.setOnClickListener(v->{
             Helpers.plusBtn(ReceiptDetails.this, sheetBinding.adultNum);
+        });
+        sheetBinding.maxChild.setOnClickListener(v->{
+            Helpers.plusBtn(ReceiptDetails.this, sheetBinding.childNum);
         });
         sheetBinding.maxNight.setOnClickListener(v->{
             Helpers.plusBtn(ReceiptDetails.this, sheetBinding.nightdNum);
