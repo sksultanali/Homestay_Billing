@@ -195,6 +195,13 @@ public class ReceiptDetails extends AppCompatActivity{
                 ContextCompat.getDrawable(this, R.drawable.peddong_side),
                 ContextCompat.getColor(this, R.color.light_real_purple)
         ));
+        arrayList.add(new CompanyModel("Dawaipani Jasshanti Homestay ",
+                "Darjeeling, India, 734101", "+91 70014 94158", "DAW",
+                ContextCompat.getDrawable(this, R.drawable.dawaipani),
+                ContextCompat.getDrawable(this, R.drawable.dawaipani_up),
+                ContextCompat.getDrawable(this, R.drawable.dawaiopani_side),
+                ContextCompat.getColor(this, R.color.light_real_gray)
+        ));
         arrayList.add(new CompanyModel("Cash Receipt ",
                 "We Are Happy to Serve You", "+91 70019 69592", "BSTAT",
                 null,

@@ -31,6 +31,7 @@
 
     <color name="real_purple">#673AB7</color>
     <color name="light_real_purple">#CBB0FD</color>
+    <color name="light_real_gray">#D6D6D6</color>
 
     <color name="light_color1_blue">#C9C9FF</color>
     <color name="light_green_color2">#e6fade</color>
