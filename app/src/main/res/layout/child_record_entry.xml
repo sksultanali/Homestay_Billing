@@ -25,7 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1.25"
         android:fontFamily="@font/roboto_medium"
-        android:gravity="center"
         android:text="Homestay"
         android:textColor="@color/black"
         android:textSize="@dimen/_5font_mdp" />

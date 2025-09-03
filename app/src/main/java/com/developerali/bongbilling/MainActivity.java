@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity{
         ));
         arrayList.add(new CompanyModel("Dawaipani Jasshanti Homestay ",
                 "Darjeeling, India, 734101", "+91 70014 94158", "DAW",
-                ContextCompat.getDrawable(this, R.drawable.dawaipani),
+                ContextCompat.getDrawable(this, R.drawable.dawaipani_a),
                 ContextCompat.getDrawable(this, R.drawable.dawaipani_up),
                 ContextCompat.getDrawable(this, R.drawable.dawaiopani_side),
                 ContextCompat.getColor(this, R.color.light_real_gray)

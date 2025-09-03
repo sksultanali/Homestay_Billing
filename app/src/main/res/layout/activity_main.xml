@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white"
-            android:minHeight="@dimen/_420mdp"
+            android:minHeight="@dimen/_460mdp"
             android:orientation="vertical">
 
             <View
@@ -87,7 +87,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_55mdp"
+                android:layout_height="@dimen/_50mdp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_up"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -101,7 +101,7 @@
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_55mdp"
+                    android:layout_height="@dimen/_50mdp"
                     android:rotation="-180"
                     android:visibility="visible"
                     android:scaleType="centerCrop"
@@ -184,7 +184,7 @@
                         android:id="@+id/back1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_25mdp"
+                        android:layout_marginEnd="@dimen/_5mdp"
                         android:background="@color/Yellow"
                         android:fontFamily="@font/roboto_medium"
                         android:paddingStart="@dimen/_5mdp"
@@ -249,6 +249,40 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/_5font_mdp" />
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5mdp"
+                        android:layout_marginEnd="@dimen/_5mdp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/checkInTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/Yellow"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_2mdp"
+                            android:paddingEnd="@dimen/_2mdp"
+                            android:text="Check In - 12: 00 PM"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_5font_mdp"/>
+                        <TextView
+                            android:id="@+id/checkOutTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/greenDark"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_2mdp"
+                            android:paddingEnd="@dimen/_2mdp"
+                            android:text="Check Out - 11: 00 AM"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_5font_mdp"/>
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -377,7 +411,7 @@
                 android:orientation="horizontal"
                 android:layout_marginStart="@dimen/_15mdp"
                 android:paddingStart="@dimen/_10mdp"
-                android:paddingTop="@dimen/_10mdp"
+                android:paddingTop="@dimen/_8mdp"
                 app:layout_constraintTop_toBottomOf="@id/fLayout">
 
                 <TextView
@@ -499,7 +533,6 @@
                     android:background="@color/light_color1_blue"
                     android:fontFamily="@font/roboto_medium"
                     android:gravity="center"
-                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="@dimen/_5font_mdp" />
 
@@ -571,42 +604,6 @@
                     android:textSize="@dimen/_5font_mdp" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/checkInTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/Yellow"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="center"
-                android:paddingStart="@dimen/_5mdp"
-                android:paddingEnd="@dimen/_5mdp"
-                android:text="Check In - 12: 00 PM"
-                android:layout_marginBottom="@dimen/_2mdp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_5font_mdp"
-                app:layout_constraintBottom_toTopOf="@+id/checkOutTime"
-                app:layout_constraintEnd_toEndOf="@+id/recyclerView"
-                app:layout_constraintStart_toStartOf="@+id/recyclerView"/>
-
-            <TextView
-                android:id="@+id/checkOutTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10mdp"
-                android:layout_weight="1"
-                android:background="@color/greenDark"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="center"
-                android:paddingStart="@dimen/_5mdp"
-                android:paddingEnd="@dimen/_5mdp"
-                android:text="Check Out - 11: 00 AM"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_5font_mdp"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-                app:layout_constraintEnd_toEndOf="@+id/recyclerView"
-                app:layout_constraintStart_toStartOf="@+id/recyclerView"/>
-
             <LinearLayout
                 android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
@@ -622,42 +619,54 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/back9"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:orientation="vertical">
+                        android:background="@color/Yellow"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingStart="@dimen/_5mdp"
+                        android:paddingEnd="@dimen/_5mdp"
+                        android:text="Rules and Regulations"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_6font_mdp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/back9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@color/Yellow"
-                            android:fontFamily="@font/roboto_medium"
-                            android:paddingStart="@dimen/_5mdp"
-                            android:paddingEnd="@dimen/_5mdp"
-                            android:text="Rules and Regulations"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_6font_mdp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/rules1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_5mdp"
-                            android:layout_marginTop="@dimen/_5mdp"
-                            android:layout_marginEnd="@dimen/_5mdp"
-                            android:fontFamily="@font/roboto_medium"
-                            android:text="1. Advance payment is Non-Refundable.
+                    <TextView
+                        android:id="@+id/rules1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5mdp"
+                        android:layout_marginTop="@dimen/_5mdp"
+                        android:layout_marginEnd="@dimen/_5mdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="1. Advance payment is Non-Refundable.
 \n2. Due amount must be paid at Check-In.
 \n3. Please Carry Your Valid Photo ID Proof for Check-In.
 \n4. Excluding Packgae - Bonfire, Barbeque, Room Heater."
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_5font_mdp" />
-                    </LinearLayout>
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5font_mdp" />
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/rules2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginStart="@dimen/_5mdp"
+                        android:layout_marginEnd="@dimen/_5mdp"
+                        android:layout_marginBottom="@dimen/_5mdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="5. Full Lodging or Advance amount will be charged as cancellation fee if notified within 30 days before the Date of Journey, Otherwise Postpone of the Tour is Available for Next 6 Months.
+\n6. Partial Cancellation is chargable as per Rule No. 5 except Postpone."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5font_mdp" />
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -801,18 +810,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/rules2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_5mdp"
-                    android:layout_marginEnd="@dimen/_5mdp"
-                    android:layout_marginBottom="@dimen/_5mdp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="5. Full Lodging or Advance amount will be charged as cancellation fee if notified within 30 days before the Date of Journey, Otherwise Postpone of the Tour is Available for Next 6 Months.
-\n6. Partial Cancellation is chargable as per Rule No. 5 except Postpone."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_5font_mdp" />
             </LinearLayout>
 
 
