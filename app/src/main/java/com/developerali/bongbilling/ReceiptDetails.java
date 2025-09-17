@@ -140,7 +140,7 @@ public class ReceiptDetails extends AppCompatActivity{
 
         binding.name.setText("Name : " + invoiceData.getgName());
         binding.address.setText("Address : " + invoiceData.getgAddress());
-        binding.phone.setText("Phone : " + invoiceData.getgName());
+        binding.phone.setText("Phone : " + (invoiceData.getgPhone() != null ? invoiceData.getgPhone() : "NA"));
         binding.journeyDate.setText(invoiceData.getjDate());
 
         binding.rules1.setText(invoiceData.getRules1());
@@ -540,8 +540,13 @@ public class ReceiptDetails extends AppCompatActivity{
                 sheetBinding.amount.setError("*");
             }else {
                 changeCount++;
+//                detailsArray.add(new DetailsModel(
+//                        description + " " + Helpers.DESCRIPTION, Integer.parseInt(price), Integer.parseInt(adult),
+//                        Integer.parseInt(Child), Integer.parseInt(room),
+//                        Integer.parseInt(night), Integer.parseInt(total)
+//                ));
                 detailsArray.add(new DetailsModel(
-                        description + " " + Helpers.DESCRIPTION, Integer.parseInt(price), Integer.parseInt(adult),
+                        description, Integer.parseInt(price), Integer.parseInt(adult),
                         Integer.parseInt(Child), Integer.parseInt(room),
                         Integer.parseInt(night), Integer.parseInt(total)
                 ));
@@ -634,7 +639,9 @@ public class ReceiptDetails extends AppCompatActivity{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                calculateTotalAmount(sheetBinding);
+                if (s.toString() != null && !s.toString().isEmpty()){
+                    calculateTotalAmount(sheetBinding);
+                }
             }
 
             @Override

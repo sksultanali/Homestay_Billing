@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white"
-            android:minHeight="@dimen/_460mdp"
+            android:minHeight="@dimen/_420mdp"
             android:orientation="vertical">
 
             <View

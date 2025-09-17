@@ -48,6 +48,8 @@ public class ReceiptAdapter extends RecyclerView.Adapter<ReceiptAdapter.ViewHold
             holder.binding.img.setImageDrawable(activity.getDrawable(R.drawable.charkholea));
         } else if (data.getInvoiceNo().contains("PED")) {
             holder.binding.img.setImageDrawable(activity.getDrawable(R.drawable.peddong_img));
+        }else if (data.getInvoiceNo().contains("DAW")) {
+            holder.binding.img.setImageDrawable(activity.getDrawable(R.drawable.dawaipani));
         }else {
             holder.binding.img.setImageDrawable(activity.getDrawable(R.drawable.place_img));
         }

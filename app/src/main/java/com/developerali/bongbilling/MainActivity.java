@@ -892,7 +892,9 @@ public class MainActivity extends AppCompatActivity{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                calculateTotalAmount(sheetBinding);
+                if (s.toString() != null && !s.toString().isEmpty()){
+                    calculateTotalAmount(sheetBinding);
+                }
             }
 
             @Override

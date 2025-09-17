@@ -52,26 +52,28 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.ViewHold
         holder.binding.slNo.setText(String.valueOf(position+1));
         holder.binding.des.setText(Helpers.capitalizeSentences(detailsModel.getDescription()));
 
-        double child = detailsModel.getChild() > 0 ? (double) detailsModel.getChild()/2 : 0;
-        double pax = detailsModel.getPAX() + child;
+        if (detailsModel.getChild() != null && detailsModel.getPAX() != null) {
+            double child = detailsModel.getChild() > 0 ? (double) detailsModel.getChild() / 2 : 0;
+            double pax = detailsModel.getPAX() + child;
 
-        holder.binding.price.setText(String.valueOf(detailsModel.getPrice()));
-        holder.binding.pax.setText(String.format("%.1f", pax));
-        holder.binding.room.setText(String.valueOf(detailsModel.getRoom()));
-        holder.binding.night.setText(String.valueOf(detailsModel.getNights()));
-        holder.binding.total.setText(String.valueOf(detailsModel.getTotal()));
+            holder.binding.price.setText(String.valueOf(detailsModel.getPrice()));
+            holder.binding.pax.setText(String.format("%.1f", pax));
+            holder.binding.room.setText(String.valueOf(detailsModel.getRoom()));
+            holder.binding.night.setText(String.valueOf(detailsModel.getNights()));
+            holder.binding.total.setText(String.valueOf(detailsModel.getTotal()));
 
-        // Hide fields if value is 0
-        if (detailsModel.getPrice() == 0) holder.binding.price.setText("");
-        if (detailsModel.getPAX() < 1) holder.binding.pax.setText("");
-        if (detailsModel.getRoom() == 0) holder.binding.room.setText("");
-        if (detailsModel.getNights() == 0) holder.binding.night.setText("");
-        if (detailsModel.getTotal() == 0) holder.binding.total.setText("");
+            // Hide fields if value is 0
+            if (detailsModel.getPrice() == 0) holder.binding.price.setText("");
+            if (detailsModel.getPAX() < 1) holder.binding.pax.setText("");
+            if (detailsModel.getRoom() == 0) holder.binding.room.setText("");
+            if (detailsModel.getNights() == 0) holder.binding.night.setText("");
+            if (detailsModel.getTotal() == 0) holder.binding.total.setText("");
 
-        // Hide SL No if all values are 0
-        if (detailsModel.getTotal() == 0 && detailsModel.getNights() == 0 && detailsModel.getPAX() == 0
-                && detailsModel.getRoom() == 0 && detailsModel.getPrice() == 0) {
-            holder.binding.slNo.setText("");
+            // Hide SL No if all values are 0
+            if (detailsModel.getTotal() == 0 && detailsModel.getNights() == 0 && detailsModel.getPAX() == 0
+                    && detailsModel.getRoom() == 0 && detailsModel.getPrice() == 0) {
+                holder.binding.slNo.setText("");
+            }
         }
 
         // Alternate row background color
